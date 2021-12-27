@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "opcions",
+  "info": {
+    "name": "opcions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

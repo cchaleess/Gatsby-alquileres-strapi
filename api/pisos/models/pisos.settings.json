@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pisos",
+  "info": {
+    "name": "Pisos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "wc": {
+      "type": "integer",
+      "required": true
+    },
+    "precio": {
+      "type": "float",
+      "required": true
+    },
+    "terraza": {
+      "type": "boolean",
+      "required": true
+    },
+    "habitaciones": {
+      "type": "integer",
+      "required": true
+    },
+    "lat": {
+      "type": "string",
+      "required": true
+    },
+    "lon": {
+      "type": "string",
+      "required": true
+    },
+    "mascota": {
+      "type": "boolean"
+    },
+    "parking": {
+      "type": "boolean",
+      "required": false
+    },
+    "imagen": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "vendedor": {
+      "model": "locadors"
+    },
+    "opcion": {
+      "model": "opcions"
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
